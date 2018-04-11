@@ -1,0 +1,48 @@
+{
+  "name": "{{ moduleName }}",
+  "version": "0.0.0",
+  "description": "{{ moduleDescription }}",
+  "license": "MIT",
+  "repository": "{{ githubUsername }}/{{ repoName }}",
+  "author": "{{ name }} <{{ email }}> {{ humanizedWebsite }} ",{{#if cli}}
+  "bin": "cli.js",{{/if}}
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "npm run lint && {{#if nyc}}nyc {{/if}}ava --verbose",
+		"lint": "tslint --project ./tsconfig.json --fix",
+		"start": "tsc -w",
+		"pretest": "tsc",
+		"precommit": "pretty-quick --staged"
+  },
+	"typings": "index.d.ts",
+  "keywords": [{{#if cli}}
+    "cli-app",
+    "cli",{{/if}}
+    ""
+  ],
+  "dependencies": {
+		"tslib": "latest"{{#if cli }},
+    "meow": "latest"
+  {{/if}}
+	},
+  "devDependencies": {
+		"husky": "^0.14.3",
+		"prettier": "^1.11.0",
+		"pretty-quick": "^1.4.1",
+		"@types/node": "latest",
+    "ava": "latest",
+    "tslint": "latest",
+    "tslint-config-prettier": "latest",
+    "typescript": "latest"{{#if coveralls }},
+    "coveralls": "latest",{{/if}}{{#if nyc }},
+    "nyc": "latest"{{/if}}
+  }{{#if coveralls }},
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }{{/if}}
+}

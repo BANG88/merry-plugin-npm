@@ -1,0 +1,38 @@
+{
+  "name": "merry-plugin-npm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "creating a npm package",
+  "keywords": ["merry-plugin-npm", "merry-plugin"],
+  "typings": "index.d.ts",
+  "scripts": {
+    "dev": "tsc -w",
+    "prepublishOnly": "tsc",
+    "precommit": "pretty-quick --staged"
+  },
+  "devDependencies": {
+    "@merryjs/cli": "latest",
+    "@types/debug": "^0.0.30",
+    "@types/diff": "^3.2.2",
+    "@types/fs-extra": "^5.0.1",
+    "@types/handlebars": "^4.0.36",
+    "@types/inquirer": ">=0.0.41",
+    "@types/node": "^9.4.7",
+    "@types/prettier": "^1.10.0",
+    "@types/swagger-parser": "^4.0.2",
+    "husky": "^0.14.3",
+    "prettier": "^1.11.0",
+    "pretty-quick": "^1.4.1",
+    "typescript": ">=2.5.2"
+  },
+  "dependencies": {
+    "execa": "^0.10.0",
+    "github-username": "^4.1.0",
+    "humanize-url": "^1.0.1",
+    "normalize-url": "^2.0.1",
+    "shelljs": "^0.8.1",
+    "superb": "^2.0.0",
+    "underscore.string": "^3.3.4"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rules": {
+    "no-submodule-imports": false,
+    "semicolon": false,
+    "quotemark": [true, "single"],
+    "interface-name": [false],
+    "member-access": [false],
+    "max-classes-per-file": [false],
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "trailing-comma": [false],
+    "arrow-parens": false,
+    "jsdoc-format": false,
+    "no-implicit-dependencies": false,
+    "no-empty-interface": false,
+    "member-ordering": false
+  }
+}

@@ -1,0 +1,8 @@
+node_modules{{# if nyc }}
+.nyc_output
+coverage{{/if}}
+*.js
+*.d.ts
+.yo-rc.json
+.vscode
+yarn-error.log
