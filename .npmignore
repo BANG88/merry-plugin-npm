@@ -4,3 +4,4 @@ tsconfig.json
 tslint.json
 snapshots*
 .vscode
+!templates/tslint.json
